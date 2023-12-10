@@ -186,23 +186,5 @@ function countGreatestDecreasInProfits(_finances) {
   return `${date} ($${greatestDecreasInProfits})`;
 
 }
-// Print the results in the console
-console.log("Financial Analysis");
-console.log("----------------------------");
-console.log("Total Months: " + total);
-console.log("Total: $" + total);
-console.log("Average Change: $" + averageChange);
-console.log(
-  "Greatest Increase in Profits/Losses: " +
-    greatestIncrease[0] +
-    " ($" +
-    greatestIncrease[1] +
-    ")"
-);
-console.log(
-  "Greatest Decrease in Profits/Losses: " +
-    greatestDecrease[0] +
-    " ($" +
-    greatestDecrease[1] +
-    ")"
-);
+
+
