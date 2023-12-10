@@ -86,3 +86,103 @@ var finances = [
   ['Jan-2017', 138230],
   ['Feb-2017', 671099],
 ];
+
+
+//Calling the function to make the Financial Analysis
+financialAnalysis(finances);
+
+//Functions
+function financialAnalysis(_finances) {
+
+  console.log(`
+Financial Analysis
+----------------
+Total Months: ${_finances.length}
+Total: $${countTotal(_finances)}
+Average Change: ${countAvarageChange(_finances)}
+Greatest Increase in Profits/Losses: ${countGreatestIncreaseInProfits(_finances)}
+Greatest Decrease in Profits/Losses: ${countGreatestDecreasInProfits(_finances)}
+`);
+
+}
+
+function countTotal(_finances) {
+  //Creating a variable to store the Total Amount
+  let total = 0;
+
+  //Loop through all the entries of the finances array
+  for(let i = 0; i < _finances.length; i++){
+    total += _finances[i][1];
+  }
+
+  //Returning the total value after it has been calculated
+  return total;
+}
+
+function countAvarageChange(_finances) {
+  // Creating variables to store the total change and count of changes
+  let totalChange = 0;
+
+  // Loop through all the entries of the finances array starting from the second element
+  for (let i = 1; i < _finances.length; i++) {
+    // Calculate the difference between the current profit and the previous profit
+    let profitDifference = _finances[i][1] - _finances[i - 1][1];
+
+    // Add the profit difference to the total change
+    totalChange += profitDifference;
+  }
+
+  // Calculate the average change by dividing the total change by the count
+  let averageChange = totalChange / (_finances.length - 1);
+
+  // Returning the Average Change after it has been calculated
+  return averageChange.toFixed(2);
+}
+
+function countGreatestIncreaseInProfits(_finances) {
+  //Creating a variable to store the Greatest Increase in Profits
+  let greatestIncreaseInProfits = 0;
+  //Creating a variable to store the date
+  let date  = "";
+
+  //Loop through all the entries of the finances array
+  for(let i = 1; i < _finances.length; i++){
+    let profitDifference = _finances[i][1] - _finances[i - 1][1];
+    //Check if the last value is greater than the current index
+    if(profitDifference > greatestIncreaseInProfits) {
+      //Assign the value to the variable
+      greatestIncreaseInProfits = profitDifference;
+
+      //Assign the date to the variable
+      date = _finances[i][0];
+    }
+  }
+
+  //Returning the Greatest Increase in Profits after it has been calculated
+  return `${date} ($${greatestIncreaseInProfits})`;
+
+}
+
+function countGreatestDecreasInProfits(_finances) {
+  //Creating a variable to store the Greatest Decreas in Profits
+  let greatestDecreasInProfits = 0;
+  //Creating a variable to store the date
+  let date  = "";
+
+  //Loop through all the entries of the finances array
+  for(let i = 1; i < _finances.length; i++){
+    let profitDifference = _finances[i][1] - _finances[i - 1][1];
+    //Check if the last value is smaller than the current index
+    if(profitDifference < greatestDecreasInProfits) {
+      //Assign the value to the variable
+      greatestDecreasInProfits = profitDifference;
+
+      //Assign the date to the variable
+      date = _finances[i][0];
+    }
+  }
+
+  //Returning the Greatest Decreas in Profits after it has been calculated
+  return `${date} ($${greatestDecreasInProfits})`;
+
+}
