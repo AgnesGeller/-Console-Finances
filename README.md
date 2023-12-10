@@ -50,3 +50,5 @@ Feel free to visit my portfolio webpage https://agnesgeller.github.io/Console-Fi
 
 
 
+![Screenshot (7)](https://github.com/AgnesGeller/Console-Finances/assets/147996856/6fba1b7f-61d2-4e2c-b2bd-ac673c6eb78c)
+
