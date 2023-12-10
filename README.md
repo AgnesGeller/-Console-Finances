@@ -42,7 +42,7 @@ This script is open source and available under the [MIT License](https://opensou
 
 ## Acknowledgements
 
-This script was developed by Agnes Geller as part of edX Front- End Web Development Bootcamp. Special thanks to Laura Cole instructor and Norbert Hajdu mentor for guidance and support.
+This script was developed by Agnes Geller as a student of edX Front- End Web Development Bootcamp. Special thanks to Laura Cole instructor and Norbert Hajdu mentor for guidance and support.
 
 ## Link
 
