@@ -46,7 +46,8 @@ This script was developed by Agnes Geller as a student of edX Front- End Web Dev
 
 ## Link
 
-Feel free to visit my portfolio webpage https://agnesgeller.github.io/Console-Finances/
+Feel free to visit my portfolio webpage:
+https://agnesgeller.github.io/Console-Finances/
 
 
 
